@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Music Player </title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+      
+      </style>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="music-container">
+      <div class="music-content">
+         <div id="bg-image">
+            <div id="blackLayer"></div>
+            <img src="images/ncs1.jpeg" alt="">
+         </div>
+         <div id="menu">
+            <img src="images/menu.png" alt="">
+            <img src="images/search.png" alt="">
+         </div>
+         <div id="volume-container">
+            <img src="images/volume-low.png" alt="">
+            <input type="range" class="slider" id="volumeslider" min="0" max="100" value="100" step="1">
+            <img src="images/volumn-high.png" alt="" id="volumn-up">
+         </div>
+         <div id="music-image">
+            <div id="circle-image">
+               <img src="images/ncs1.jpeg" alt="" id="image">
+            </div>
+            <div id="music-title">
+               <h5 id="playlist_status"></h5>
+               <h6 id="playlist_artist"></h6>
+            </div>
+         </div>
+         <div id="music-menu">
+            <button id="random"><img src="images/random.png" alt=""></button>
+            <button id="mutebtn"><img src="images/speaker.png" alt=""></button>
+         </div>
+         <div id="currentTime">
+            <span id="curtimetext">00:00</span>
+            <span id="durtimetext">00:00</span>
+         </div>
+         <input type="range" class="seekslider" id="seekslider" min="0" max="100" value="0" step="1">
+         <div id="buttons">
+            <button class="repeat" id="repeat"><img src="images/rep.png" alt=""></button>
+            <div>
+               <button class="pre" id="prevbtn"><img src="images/backward.png" alt=""></button>
+               <button class="play" id="playpusebtn"><img src="images/play-red.png" alt=""></button>
+               <button class="next" id="nextbtn"><img src="images/forward.png" alt=""></button>
+            </div>
+            <span class="like"><i class="far fa-heart" aria-hidden="true"></i></span>
+         </div>
+      </div>
+   </div>
+   <script src="main.js"></script>
+</body>
+</html>
