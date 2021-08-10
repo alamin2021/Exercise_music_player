@@ -269,7 +269,8 @@ button{
    height: 100%;
 }
 
-.pre img,.next img{ 
+.play img,
+.next img{ 
    width: 20px;
    height: 20px;
 }
