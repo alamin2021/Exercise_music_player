@@ -133,7 +133,7 @@ button{
 
 #circle-image{
    position: absolute;
-   top: 33%;
+   top: -33%;
    left: 50%;
    transform: translate(-50%, 50%);
   

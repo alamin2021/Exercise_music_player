@@ -1,0 +1,4 @@
+1 , At First Create An Audio Tag 
+2 : Load Your Audio Tag . Write a function() about Play song And Pause song 
+3 : Declare  variable like {Let isPlaying = false} and Define an array from which will Load Data title ,name , artist , music file name 
+4 : Write prev song and next song function()
