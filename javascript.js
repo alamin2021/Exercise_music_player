@@ -7,7 +7,7 @@ dir = "music/";
 playlist = ['jacinto-1','Elektronomia','Johnning','popsicle','Fearless'];
 title = ['Cartoon - on & On ','Elektronomia ', 'janji-Heroes Tonight ', 'Popsicle','Lost Sky-Fearless'];
 artists = ['(feat. Daniel Levi) [NCS Release]','Electronomia -Sky High[NCS Release]','(Feat . fJohnning ) [NCS Release ]','LFZ - [NCS Release]','(feat. Chris Linton) [NCS Release]'];
-poster = ['images/ncs1.jpeg','images/ncs2.jpg','images/ncs3.jpg','images/ncs4.jpg','images/ncs5.jpeg'] ;
+poster = ['images/ncs1.jpeg','images/ncs2.jpg','images/ncs3.jpg','images/ncs4.jpg','images/ncs5.jpg'] ;
 
 // Used to run on every browser 
 
@@ -32,7 +32,12 @@ playlist_artist = document.getElementById('playlist_artist');
 repeat = document.getElementById('repeat');
 randomSong = document.getElementById('random');
 
-// 
+// Js change -----------------------------------------------------------------------------------------------------------
+let playPauseImg = document.querySelector("#playPauseImage");
+let backgroundImg = document.querySelector('#bg-image img');
+let posterImg = document.querySelector('#image');
+let mutebtnImg = document.querySelector("#mutebtn img");
+let repeatImg = document.querySelector("#repeat img");
 
 playlist_index = 0 ;
 
@@ -68,9 +73,9 @@ randomSong.addEventListener('click',random);
 // Functions
 function fetchMusicDetails(){
    // poster image , pause / play image 
-   $("#playpausebtn img").attr('src',"images/pause-red.png");
-   $('#bgImage').attr('src',poster[playlist_index]);
-   $('#image').attr('src',poster[playlist_index]);
+   playPauseImg.setAttribute('src',"images/pause-red.png");
+   backgroundImg.setAttribute('src',poster[playlist_index]);
+   posterImg.setAttribute('src',poster[playlist_index]);
 
    // title and artists
    playlist_status.innerHTML = title[playlist_index];
@@ -84,11 +89,11 @@ function playPause(){
    if(audio.paused){
       // console.log('play');
       audio.play();
-      $('#playpausebtn img').attr('src','images/pause-red.png');
+      playPauseImg.setAttribute('src','images/pause-red.png');
    }else{
       // console.log('paused');
       audio.pause();
-      $('#playpausebtn img').attr('src','images/play-red.png');
+      playPauseImg.setAttribute('src','images/play-red.png');
    }
 }
 function nextSong(){
@@ -108,10 +113,10 @@ function prevSong(){
 function mute(e){
    if(audio.muted){
       audio.muted = false ;
-      $("#mutebtn img").attr('src','images/speaker.png');
+      mutebtnImg.setAttribute('src','images/speaker.png');
    }else{
       audio.muted = true ;
-      $("#mutebtn img").attr('src','images/mute.png');
+      mutebtnImg.setAttribute('src','images/mute.png');
    }
 }
 function seek(event){
@@ -161,10 +166,10 @@ function switchTrack(){
 function loop(){
    if(audio.loop){
       audio.loop = false ;
-      $("#repeat img").attr("src","images/rep.png");
+      repeatImg.setAttribute("src","images/rep.png");
    }else{
       audio.loop = true ;
-      $("#repeat img").attr("src","images/rep1.png");
+      repeatImg.setAttribute("src","images/rep1.png");
    }
 }
 function getRandomNumber(min,max){
