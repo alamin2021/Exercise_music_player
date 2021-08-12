@@ -36,8 +36,8 @@ randomSong = document.getElementById('random');
 let playPauseImg = document.querySelector("#playPauseImage");
 let backgroundImg = document.querySelector('#bg-image img');
 let posterImg = document.querySelector('#image');
-let mutebtnImg = document.querySelector("#mutebtn img");
-let repeatImg = document.querySelector("#repeat img");
+let mutebtnImg = document.querySelector("#muteImag");
+let repeatImg = document.querySelector("#repeatImg");
 
 playlist_index = 0 ;
 
